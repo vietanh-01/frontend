@@ -1,0 +1,297 @@
+/* Sidebar styling */
+#sidebar {
+    min-height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+}
+
+#sidebar .sidebar-header {
+    font-size: 1.5rem;
+    padding: 20px;
+    background-color: #212529;
+}
+
+#sidebar .list-unstyled {
+    padding-left: 0;
+    padding-left: 20px;
+}
+#sidebar .list-unstyled li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#sidebar .list-unstyled li.active {
+    background-color: #495057;
+}
+
+#sidebar .list-unstyled li a {
+    color: #ffffff;
+}
+
+#page-content-wrapper {
+    margin-left: 250px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+#sidebar ul ul {
+    background: #495057;
+    padding-left: 0;
+}
+
+#sidebar ul ul li a {
+    font-size: 0.9rem;
+    padding-left: 2rem;
+}
+.fa-bell {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.25em 0.4em;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    transition: all 0.3s;
+}
+
+#sidebar.toggled {
+    margin-left: -250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    transition: all 0.3s;
+}
+
+#page-content-wrapper.toggled {
+    margin-left: 0;
+}
+.pointer{
+    cursor: pointer;
+}
+#iconbaradmin{
+    visibility: hidden;
+}
+#navbarmain{
+    position: fixed;
+    top: 0;
+    left: 250px; 
+    width: calc(100% - 250px);
+    z-index: 1;
+}
+#page-content-wrapper {
+    padding-top: 50px; /* Khoảng cách để tránh navbar che nội dung */
+}
+.navbarmainrom{
+    left: 0px !important; 
+    width: 100% !important;
+}
+
+@media (max-width: 576px) {
+    #sidebar {
+        position: absolute; /* Đổi thành position absolute để hiển thị trên cùng */
+        margin-left: -250px; /* Ẩn thanh bên */
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        z-index: 1000; /* Đảm bảo thanh bên hiển thị trên cùng */
+    }
+
+    #sidebar.toggled {
+        margin-left: 0; /* Hiện thanh bên */
+    }
+
+    #page-content-wrapper {
+        margin-left: 0; /* Nội dung không có margin bên trái */
+    }
+
+    .fa-bell {
+        font-size: 1.25rem; /* Giảm kích thước biểu tượng cho thiết bị nhỏ */
+    }
+    #iconbaradmin{
+        visibility: visible;
+    }
+    #navbarmain{
+        left: 0px !important; 
+        width: 100% !important;
+    }
+}
+
+.table-responsive {
+    overflow-x: auto; /* Cho phép cuộn ngang nếu bảng quá rộng */
+    -webkit-overflow-scrolling: touch; /* Thêm hỗ trợ cuộn mượt trên iOS */
+}
+
+.table {
+    width: 100%; /* Bảng chiếm toàn bộ chiều rộng của khung chứa */
+    border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+}
+
+.table th, .table td {
+    padding: 10px; /* Khoảng cách bên trong các ô */
+    border: 1px solid #ddd; /* Đường viền cho các ô */
+    text-align: left; /* Canh trái nội dung trong ô */
+}
+.tablediv{
+    margin-top: 15px;
+    border: 1px solid #e3e3e3;
+    -webkit-box-shadow: 0 0 10px #d4d4d4;
+        box-shadow: 0 0 10px #d4d4d4;
+}
+.headertable{
+    /* background-color: #fafafa; */
+    padding: 7px 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.lbtable{
+    color: #5733dd;
+    font-weight: 500;
+}
+.divcontenttable{
+    background: #fff;
+    padding: 17px 20px;
+}
+.deletebtn{
+    color: #5733dd;
+    cursor: pointer;
+    font-weight: bold;
+}
+.dopmenu li a{
+    color: #000 !important;
+    margin-top: 10px !important;
+}
+.headertable{
+    position: relative;
+}
+.btntableheader{
+    position: absolute;
+    right: 20px;
+    height: 25px;
+    font-size: 13px;
+    border: none;
+    background: #5733dd;
+    color: #fff;
+    border-radius: 5px;
+}
+.lb-form{
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.inputdate{
+    width: 200px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #333;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.tinhtoancl{
+    display: none;
+}
+.tinhtoancl span{
+   font-size: 24px;
+   font-weight: bold;
+}
+.tinhtoancl img{
+   width: 140px;
+}
+.header-sp{
+    margin-bottom: 50px;
+}
+@keyframes barWidth {
+    0% {
+        width: 0%;
+    }
+    25% {
+        width: 50%;
+    }
+    50% {
+        width: 100%;
+    }
+    75% {
+        width: 50%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes barWidth2 {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+#loading {
+    margin-top: 20px;
+    height: 4px;
+    width: 100%;
+    display: none;
+}
+
+.bar {
+    position: relative;
+    width: 0%;
+    height: 100%;
+    margin: 0 auto;
+    animation: barWidth;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.bar1 {
+    animation-delay: 0s;
+    background: #02a09a;
+    top: 0;
+    z-index: 1;
+}
+.icontable{
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+}
+#mainpageadmin{
+    font-size: 13px;
+}
+.activenavbar{
+    background-color: #8f8f8f;
+    padding-left: 10px;
+}
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.edit-btn {
+    background-color: #f39c12;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
